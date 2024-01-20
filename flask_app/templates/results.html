@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .prediction {
+            font-size: 24px; /* Larger font size */
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Prediction Result</h1>
+    <div class="prediction">
+        For {{ years_exp }} years of experience, the predicted salary is ${{ '%.2f'|format(prediction) }}
+    </div>
+    <br>
+    <a href="{{ url_for('home') }}">Try again</a>
+</body>
+</html>
+

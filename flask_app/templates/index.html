@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Salary Prediction</title>
+</head>
+<body>
+    <h1>Salary Prediction Based on Years of Experience</h1>
+    <img src="data:image/png;base64,{{ plot_url }}" alt="Regression Plot">
+    <form method="post">
+        <label for="years_exp">Years of Experience:</label>
+        <input type="text" id="years_exp" name="years_exp">
+        <input type="submit" value="Predict">
+    </form>
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+</body>
+</html>
